@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miss Royale Gauteng</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+<!-- Google AdSense -->
+<script data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<style>
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0b3d91; /* royal blue */
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* CROWN WATERMARK */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background: url('crown.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.08;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: floatCrown 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px gold);
+}
+
+@keyframes floatCrown {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-20px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    background-color: #082567;
+    position: relative;
+}
+.header img {
+    position: absolute;
+    left: 20px;
+    height: 70px;
+}
+.header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 60px;
+    color: white;
+    margin: 0;
+}
+
+/* SECTIONS */
+.section {
+    padding: 40px 20px;
+    text-align: left;
+}
+.section-box h2 {
+    color: white;
+    margin-top: 0;
+}
+
+/* FORM */
+.form-container {
+    background: white;
+    color: black;
+    padding: 30px;
+    margin: auto;
+    border-radius: 15px;
+    width: 60%;
+    box-shadow: 0 0 20px gold;
+    text-align: left;
+}
+label {
+    font-weight: bold;
+}
+.required {
+    color: red;
+    margin-left: 4px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 18px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    display: block;
+    margin: auto;
+    background: gold;
+    color: #0b3d91;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background: #ffd700;
+}
+
+/* TEAM */
+.team-member {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* SUCCESS PAGE */
+.success {
+    display: none;
+    text-align: center;
+    padding: 100px;
+}
+.success .tick {
+    font-size: 100px;
+    color: green;
+}
+.success h2 {
+    font-size: 36px;
+    color: gold;
+}
+
+/* FOOTER */
+footer {
+    background-color: #082567;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: gold;
+}
+
+/* FLOATING CROWN EMOJI */
+.crown {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 50px;
+    animation: floatEmoji 3s ease-in-out infinite;
+}
+@keyframes floatEmoji {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* AD STYLES */
+.ad-box {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+</style>
+
+<script>
+function submitForm(e){
+    e.preventDefault();
+
+    // Collect form values
+    let name = encodeURIComponent(document.getElementById("name").value);
+    let phone = encodeURIComponent(document.getElementById("phone").value);
+    let id = encodeURIComponent(document.getElementById("id").value);
+    let address = encodeURIComponent(document.getElementById("address").value);
+    let about = encodeURIComponent(document.getElementById("about").value);
+
+    // WhatsApp number
+    let whatsappNumber = "27754980175";
+    let message = `New Miss Royale Application:%0A%0AFull Name: ${name}%0APhone: ${phone}%0AID: ${id}%0AAddress: ${address}%0AAbout: ${about}`;
+
+    // Open WhatsApp in new tab
+    window.open("https://wa.me/" + whatsappNumber + "?text=" + message, "_blank");
+
+    // Show success message
+    document.body.innerHTML = `
+        <div class="success">
+            <div class="cross">x</div>
+            <h2>Application Has Been Sent Successfully</h2>
+            <p>Please ensure you send proof of payment to WhatsApp: 075 4980 175</p>
+        </div>
+    `;
+}
+</script>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="agency.jpg" alt="Miss Royale Gauteng Logo">
+    <h1>Miss Royale Gauteng</h1>
+</div>
+
+<!-- Top Ad -->
+<div class="ad-box">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+<div class="section section-box">
+    <h2>Our Vision</h2>
+    <p>To be a premier platform in Gauteng that uplifts, empowers, and celebrates young women by cultivating confidence, leadership, purpose and community service. Miss Royale Gauteng envisions young queens who are not only role models of elegance and grace but also voices of positive change in their communities.</p>
+</div>
+
+<div class="section section-box">
+    <h2>Our Mission</h2>
+    <ul>
+        <li>Empowering women to discover and embrace their personal strengths, self-confidence and unique voices.</li>
+        <li>Developing leadership skills through mentorship, workshops and community engagement opportunities.</li>
+        <li>Encouraging social responsibility by inspiring titleholders and participants to advocate for meaningful causes.</li>
+        <li>Celebrating cultural pride, diversity and excellence among young women across Gauteng.</li>
+    </ul>
+</div>
+
+<div class="section section-box">
+    <h2>Purpose Statement</h2>
+    <p>The pageant aims to create a supportive sisterhood where young women grow personally and professionally, gaining confidence, advocacy experience, public speaking skills, and the opportunity to serve as ambassadors for community upliftment.</p>
+</div>
+
+<div class="section section-box">
+    <h2>Registration Fee & Banking Details</h2>
+    <p><strong>R200 (Non-refundable)</strong></p>
+    <p>All registration and sponsor payments must be made via bank transfer.</p>
+    <p>
+        <strong>Bank:</strong> FIRST NATIONAL BANK (FNB)<br>
+        <strong>Account Name:</strong> Miss Royale Gauteng<br>
+        <strong>Account Number:</strong> 63196371157<br>
+        <strong>Branch Code:</strong> 250655<br>
+        <strong>Reference:</strong> Applicant or Sponsor Full Name
+    </p>
+</div>
+
+<div class="section">
+    <h2>Model Application Form</h2>
+    <div class="form-container">
+        <label>Full Name <span class="required">*</span></label>
+        <input type="text" id="name" required>
+
+        <label>Phone Number <span class="required">*</span></label>
+        <input type="text" id="phone" required>
+
+        <label>ID Number <span class="required">*</span></label>
+        <input type="text" id="id" required>
+
+        <label>Address <span class="required">*</span></label>
+        <input type="text" id="address" required>
+
+        <label>Tell us about yourself</label>
+        <textarea id="about"></textarea>
+
+        <!-- Checkbox inline -->
+        <div style="display: flex; align-items: left; margin-bottom: 4px;">
+            <input type="checkbox" required style="margin:0 0px 0;">
+            <span>I agree to the Terms & Conditions</span>
+        </div>
+
+        <button onclick="submitForm(event)">Submit Application</button>
+    </div>
+</div>
+
+<!-- Bottom Ad -->
+<div class="ad-box">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="1234567891"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+<div class="section section-box">
+    <h2>Our Team</h2>
+    <div class="team-member">
+        <img src="barateng.jpg" alt="Barateng Mokwanase">
+        <div><strong>Founder & Director:</strong> Barateng Mokwanase</div>
+    </div>
+    <div class="team-member">
+        <img src="lora.jpg" alt="Lora Mkhonazi">
+        <div><strong>Ambassador:</strong> Lora Mkhonazi</div>
+    </div>
+    <div class="team-member">
+        <img src="lorraine.jpg" alt="Lorraine Mkhonazi">
+        <div><strong>Pageant Coordinator:</strong> Lorraine Mkhonazi</div>
+    </div>
+    <div class="team-member">
+        <img src="ofentse.jpg" alt="Ofentse Mahlahlane">
+        <div><strong>Choreographer:</strong> Ofentse Mahlahlane</div>
+    </div>
+</div>
+
+<div class="section section-box">
+    <h2>Contact & Social Media</h2>
+    <p>Instagram: @missroyalegauteng<br>Facebook: Miss Royale Gauteng<br>WhatsApp: +27 75 4980 175</p>
+</div>
+
+<footer>
+© 2026 Miss Royale Gauteng. All Rights Reserved.
+</footer>
+
+<div class="crown">👑</div>
+
+</body>
+</html>
